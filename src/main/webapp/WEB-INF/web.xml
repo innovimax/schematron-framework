@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE web-app
+    PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+    "http://java.sun.com/dtd/web-app_2_3.dtd">
+
+<web-app>
+  <display-name>SCHFMK</display-name>
+  <description>Schematron Framework</description>   
+  <!-- params -->    
+  <context-param><param-name>path-data</param-name><param-value>/data/projets/webapps/schfmk/public</param-value></context-param>    
+  <!-- servlets -->     
+  <servlet>
+    <servlet-name>exec</servlet-name>
+    <servlet-class>Servlet</servlet-class>        
+  </servlet>  
+  <servlet>
+    <servlet-name>test</servlet-name>
+    <servlet-class>Servlet</servlet-class>    
+    <init-param><param-name>test-mode</param-name><param-value>true</param-value></init-param>   
+  </servlet>   
+  <!-- mapping -->           
+  <servlet-mapping>
+    <servlet-name>exec</servlet-name>
+    <url-pattern>/exec</url-pattern>
+  </servlet-mapping>  
+  <servlet-mapping>
+    <servlet-name>test</servlet-name>
+    <url-pattern>/test</url-pattern>
+  </servlet-mapping>    
+  <!-- config -->    
+  <session-config>
+    <session-timeout>60</session-timeout>    
+  </session-config>
+</web-app>
