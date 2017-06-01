@@ -22,7 +22,7 @@
             <version>9.7.0-18</version>
         </dependency>        
     </dependencies>
-    <build>
+    <build> 
         <finalName>SchFMK</finalName>
     </build>
 </project>
